@@ -13,6 +13,7 @@ import org.cvschools.pillreminder.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -30,22 +31,15 @@ public class MainFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 	                         Bundle savedInstanceState) {
 
-		String[] data = {
-				"Aspirin",
-				"Tylenol"
-		};
-		List<String> dataList = new ArrayList<>(Arrays.asList(data));
+		List<PillInfo> pillInfoList = new ArrayList<>();
+		pillInfoList.add(new PillInfo("Aspirin", new Date(2017, 5, 3)));
 
-		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
-				getActivity(),
-				R.layout.list_item,
-				R.id.text_pill_name,
-				dataList);
+		PillInfoAdapter pillInfoAdapter = new PillInfoAdapter(getActivity(), pillInfoList);
 
 		View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
 		ListView listView = (ListView) rootView.findViewById(R.id.listview_pill);
-		listView.setAdapter(arrayAdapter);
+		listView.setAdapter(pillInfoAdapter);
 
 		return rootView;
 	}
