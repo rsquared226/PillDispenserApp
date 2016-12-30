@@ -8,7 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by Rahul on 12/29/2016.
@@ -36,8 +38,8 @@ public class PillInfoAdapter extends ArrayAdapter<PillInfo> {
 		TextView expirationDate = (TextView) convertView.findViewById(R.id.text_expiration_date);
 
 		pillName.setText(pillInfo.getName());
-		date.setText(pillInfo.getDate().getYear() + "/" + pillInfo.getDate().getMonth() + "/" + pillInfo.getDate().getDay());
-		expirationDate.setText(pillInfo.getExpirationDate().getYear() + "/" + pillInfo.getExpirationDate().getMonth() + "/" + pillInfo.getExpirationDate().getDay());
+		date.setText(new SimpleDateFormat("yyyy-MM-dd", Locale.US).format(pillInfo.getDate()));
+		expirationDate.setText(new SimpleDateFormat("yyyy-MM-dd", Locale.US).format(pillInfo.getExpirationDate()));
 
 		return convertView;
 	}
