@@ -4,16 +4,17 @@
 	android:id="@+id/container"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	tools:context=".MainActivity"
-	tools:ignore="MergeRootFrame">
+	tools:context=".MainActivity">
 
 	<fragment
+		android:layout_margin="16dp"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:name="org.cvschools.pillreminder.MainFragment"
 		tools:layout="@layout/fragment_main"/>
 
 	<android.support.design.widget.FloatingActionButton
+		android:id="@+id/fab"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		app:fabSize="normal"
