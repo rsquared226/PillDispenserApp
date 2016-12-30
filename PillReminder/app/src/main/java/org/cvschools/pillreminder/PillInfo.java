@@ -9,10 +9,12 @@ import java.util.Date;
 public class PillInfo {
 	private String name;
 	private Date date;
+	private Date expirationDate;
 
-	public PillInfo(String name, Date date) {
+	public PillInfo(String name, Date date, Date expirationDate) {
 		this.name = name;
 		this.date = date;
+		this.expirationDate = expirationDate;
 	}
 
 	public String getName() {
@@ -21,5 +23,9 @@ public class PillInfo {
 
 	public Date getDate() {
 		return date;
+	}
+
+	public Date getExpirationDate() {
+		return expirationDate;
 	}
 }

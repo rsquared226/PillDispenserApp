@@ -1,11 +1,23 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/container"
-             android:layout_width="match_parent" android:layout_height="match_parent"
-             tools:context=".MainActivity" tools:ignore="MergeRootFrame">
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/container"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MainActivity"
+	tools:ignore="MergeRootFrame">
 
 	<fragment
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:name="org.cvschools.pillreminder.MainFragment"
 		tools:layout="@layout/fragment_main"/>
-</FrameLayout>
+
+	<android.support.design.widget.FloatingActionButton
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:fabSize="normal"
+		android:src="@drawable/plus"
+		android:layout_margin="16dp"
+		android:layout_gravity="bottom|right"/>
+</android.support.design.widget.CoordinatorLayout>

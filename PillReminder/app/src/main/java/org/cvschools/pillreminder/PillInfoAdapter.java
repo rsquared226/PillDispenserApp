@@ -33,9 +33,11 @@ public class PillInfoAdapter extends ArrayAdapter<PillInfo> {
 
 		TextView pillName = (TextView) convertView.findViewById(R.id.text_pill_name);
 		TextView date = (TextView) convertView.findViewById(R.id.text_date);
+		TextView expirationDate = (TextView) convertView.findViewById(R.id.text_expiration_date);
 
 		pillName.setText(pillInfo.getName());
 		date.setText(pillInfo.getDate().getYear() + "/" + pillInfo.getDate().getMonth() + "/" + pillInfo.getDate().getDay());
+		expirationDate.setText(pillInfo.getExpirationDate().getYear() + "/" + pillInfo.getExpirationDate().getMonth() + "/" + pillInfo.getExpirationDate().getDay());
 
 		return convertView;
 	}

@@ -32,7 +32,8 @@ public class MainFragment extends Fragment {
 	                         Bundle savedInstanceState) {
 
 		List<PillInfo> pillInfoList = new ArrayList<>();
-		pillInfoList.add(new PillInfo("Aspirin", new Date(2017, 5, 3)));
+		pillInfoList.add(new PillInfo("Aspirin", new Date(2017, 5, 3), new Date(2018, 5, 9)));
+		pillInfoList.add(new PillInfo("Nitrostat", new Date (2017, 5, 4), new Date(2018, 5, 29)));
 
 		PillInfoAdapter pillInfoAdapter = new PillInfoAdapter(getActivity(), pillInfoList);
 
